@@ -1,3 +1,43 @@
-<div>
-    <h1>Hola, soy Diego</h1>
-</div>
+---
+const navElementos = [
+    {
+        titulo: "Inicio",
+        label: "inicio",
+        url: "inicio",
+    },
+    {
+        titulo: "Egresados",
+        label: "egresados",
+        url: "egresados",
+    },
+    {
+        titulo: "Ubicación",
+        label: "ubicacion",
+        url: "ubicacion",
+    },
+    {
+        titulo: "Asistencia",
+        label: "asistencia",
+        url: "asistencia",
+    },
+];
+---
+
+<header
+    class="fixed top-0 z-10 flex justify-center items-center w-full bg-opacity-40 h-12"
+>
+    <div>
+        <nav class="hidden md:flex flex-row">
+            {
+                navElementos.map((link) => (
+                    <a
+                        href={link.url}
+                        class="relative block px-2 py-2 text-text font-medium transition hover:text-lavender"
+                    >
+                        {link.titulo}
+                    </a>
+                ))
+            }
+        </nav>
+    </div>
+</header>
