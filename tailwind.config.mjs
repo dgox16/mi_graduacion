@@ -8,10 +8,10 @@ export default {
 			xs: "380px",
 			...defaultTheme.screens,
 		},
-		// fontFamily: {
-		//     display: ["Onest Variable"],
-		//     body: ["Onest Variable"],
-		// },
+		fontFamily: {
+			display: ["Anek Latin Variable"],
+			body: ["Aileron"],
+		},
 	},
 
 	plugins: [],

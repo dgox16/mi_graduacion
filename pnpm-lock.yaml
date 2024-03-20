@@ -11,6 +11,9 @@ dependencies:
   '@fontsource-variable/anek-latin':
     specifier: ^5.0.17
     version: 5.0.17
+  '@fontsource/aileron':
+    specifier: ^5.0.7
+    version: 5.0.7
   astro:
     specifier: ^4.4.11
     version: 4.4.11
@@ -540,6 +543,10 @@ packages:
 
   /@fontsource-variable/anek-latin@5.0.17:
     resolution: {integrity: sha512-uLyRPGVjcdguC6x3jLHdWBsgQHXuI0FrupgwADJpznx4DAn7I2rIOJROH+IP829Uq/NqtL8cv0mAB8dIT4WTLw==}
+    dev: false
+
+  /@fontsource/aileron@5.0.7:
+    resolution: {integrity: sha512-y1IDc1n1dqLaUELwpbj5nNmppialM2eCwsSjK4CZ8V9WFwNKbDx/FprEPcTmteLWX7yoOHWP1kgC6bPQHagcEA==}
     dev: false
 
   /@isaacs/cliui@8.0.2:
