@@ -1,26 +1,22 @@
+---
+import UbicacionElemento from "../components/UbicacionElemento.astro";
+---
+
 <section class="flex justify-center mt-7">
     <div
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-[330px] xs:w-[380px] sm:w-[600px] lg:w-[800px] 2xl:w-[1200px]"
     >
-        <div class="bg-black rounded-lg text-white p-3">
-            <h1>Ceremonia Religiosa</h1>
-            <h2>Templo de San Diego</h2>
-            <p>
-                Av. Tata Vasco 45-3, Centro histórico de Morelia, 58230 Morelia,
-                Mich.
-            </p>
-            <a href="https://maps.app.goo.gl/Urr1aLe8bsu1vXJw7" target="_blank"
-                >Ver en el mapa</a
-            >
-        </div>
-
-        <div class="bg-black rounded-lg text-white p-3">
-            <h1>Recepción</h1>
-            <h2>Quinta Santa fe</h2>
-            <p>Sobre Av. Atecuaro, Morelia, Mich</p>
-            <a href="https://maps.app.goo.gl/4j8uphSJqsvk2Qht5" target="_blank"
-                >Ver en el mapa</a
-            >
-        </div>
+        <UbicacionElemento
+            evento="Ceremonia Religiosa"
+            lugar="Templo de San Diego"
+            direccion="Av. Tata Vasco 45-3, Centro histórico de Morelia, 58230 Morelia, Mich."
+            url="https://maps.app.goo.gl/Urr1aLe8bsu1vXJw7"
+        />
+        <UbicacionElemento
+            evento="Recepción"
+            lugar="Quinta Santa fe"
+            direccion="Sobre Av. Atecuaro, Morelia, Mich"
+            url="https://maps.app.goo.gl/4j8uphSJqsvk2Qht5"
+        />
     </div>
 </section>

@@ -1,0 +1,10 @@
+---
+const { evento, lugar, direccion, url } = Astro.props;
+---
+
+<div class="bg-black rounded-lg text-white p-3">
+    <h1>{evento}</h1>
+    <h2>{lugar}</h2>
+    <p>{direccion}</p>
+    <a href={url} target="_blank">Ver en el mapa</a>
+</div>
