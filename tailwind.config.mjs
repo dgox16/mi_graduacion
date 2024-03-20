@@ -8,11 +8,6 @@ export default {
 			xs: "380px",
 			...defaultTheme.screens,
 		},
-		extend: {
-			width: {
-				recommend: "115ch",
-			},
-		},
 		// fontFamily: {
 		//     display: ["Onest Variable"],
 		//     body: ["Onest Variable"],

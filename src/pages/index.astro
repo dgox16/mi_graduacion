@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Encabezado from "../components/Encabezado.astro";
+import Ubicacion from "../components/Ubicacion.astro";
 import "@fontsource-variable/anek-latin";
 ---
 
@@ -10,13 +11,16 @@ import "@fontsource-variable/anek-latin";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Mi graduación</title>
 	</head>
 	<body>
 		<header>
 			<Navbar />
 			<Encabezado />
 		</header>
+		<main>
+			<Ubicacion />
+		</main>
 	</body>
 </html>
 
