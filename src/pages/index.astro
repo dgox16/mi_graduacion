@@ -1,5 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Encabezado from "../components/Encabezado.astro";
+import "@fontsource-variable/anek-latin";
 ---
 
 <html lang="es">
@@ -11,6 +13,15 @@ import Navbar from "../components/Navbar.astro";
 		<title>Astro</title>
 	</head>
 	<body>
-		<Navbar />
+		<header>
+			<Navbar />
+			<Encabezado />
+		</header>
 	</body>
 </html>
+
+<style is:global>
+	body {
+		font-family: "Anek Latin Variable", system-ui, sans-serif;
+	}
+</style>

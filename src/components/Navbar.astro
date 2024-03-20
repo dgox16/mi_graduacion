@@ -23,16 +23,16 @@ const navElementos = [
 ];
 ---
 
-<header
-    class="fixed top-0 z-10 flex justify-center items-center w-full bg-opacity-40 h-12"
+<div
+    class="fixed top-0 z-10 flex bg-black text-white justify-center items-center w-full bg-opacity-15 h-12"
 >
     <div>
-        <nav class="hidden md:flex flex-row">
+        <nav class="flex flex-row">
             {
                 navElementos.map((link) => (
                     <a
                         href={link.url}
-                        class="relative block px-2 py-2 text-text font-medium transition hover:text-lavender"
+                        class="relative block px-2 py-2 text-text font-bold transition hover:text-lavender"
                     >
                         {link.titulo}
                     </a>
@@ -40,4 +40,4 @@ const navElementos = [
             }
         </nav>
     </div>
-</header>
+</div>
