@@ -28,6 +28,16 @@ import "@fontsource/aileron/700.css";
 
 <style is:global>
 	body {
+	}
+
+	html {
+		scroll-behavior: smooth;
 		font-family: "Aileron", system-ui, sans-serif;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>
