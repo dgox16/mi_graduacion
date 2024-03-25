@@ -1,0 +1,51 @@
+---
+const listaQuimicos = [
+    { nombreLargo: "Acevedo Albor Valeria Delaney" },
+    { nombreLargo: "Alvarado Madrigal Mariam Daniela" },
+    { nombreLargo: "Anguiano Tapia Imanol" },
+    { nombreLargo: "Campos Hernández Amayrani" },
+    { nombreLargo: "Chávez Urrutia Jared Israel" },
+    { nombreLargo: "Flores Cárdenas Adriana" },
+    { nombreLargo: "Florian Rodríguez Ulises" },
+    { nombreLargo: "García Bedolla Juan Daniel" },
+    { nombreLargo: "García Gómez Merari" },
+    { nombreLargo: "Gómez González Paloma Jamilet" },
+    { nombreLargo: "González Sánchez Zuleyma" },
+    { nombreLargo: "Guzmán Villalobos Jocelin Ariadne" },
+    { nombreLargo: "Hernández Pérez Angel de Abril" },
+    { nombreLargo: "Huante Díaz Francisco Javier" },
+    { nombreLargo: "Juárez Flores Andrea" },
+    { nombreLargo: "Landa Loya Siomara Inés" },
+    { nombreLargo: "Linares Aguilar Orlando Daniel" },
+    { nombreLargo: "Magaña Magaña Kayla" },
+    { nombreLargo: "Montaño Valdez Porfirio" },
+    { nombreLargo: "Ocegueda González Samara" },
+    { nombreLargo: "Ortiz Tapia José Francisco" },
+    { nombreLargo: "Peña Nuñez Julio Cesar" },
+    { nombreLargo: "Pineda Cazares Ronald" },
+    { nombreLargo: "Rangel Mejía Tatiana" },
+    { nombreLargo: "Reza Moreno Valeria Belen" },
+    { nombreLargo: "Rodríguez González Víctor Antonio" },
+    { nombreLargo: "Tapia Muñoz Mauricio Iván" },
+    { nombreLargo: "Tapia Vargas Jovana Chantal" },
+    { nombreLargo: "Tenorio Gutiérrez Dulce Yolanda" },
+    { nombreLargo: "Torres Valdez Jennifer" },
+    { nombreLargo: "Valdovinos Salguero Devany" },
+    { nombreLargo: "Vázquez Pérez Itzel del Milagro" },
+    { nombreLargo: "Villegas Zuñiga Felipe Eduardo" },
+];
+---
+
+<section class="flex justify-center">
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 lg:gap-x-9 xl:gap-x-12 w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
+    >
+        {
+            listaQuimicos.map((quimico) => (
+                <span class="text-[20px]/6 lg:text-xl xl:text-2xl text-center">
+                    {quimico.nombreLargo}
+                </span>
+            ))
+        }
+    </div>
+</section>
