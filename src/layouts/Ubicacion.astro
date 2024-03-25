@@ -2,101 +2,36 @@
 import UbicacionElemento from "../components/UbicacionElemento.astro";
 ---
 
-<section class="flex justify-center mt-7" id="ubicacion">
-    <div
-        class="text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-x-0 gap-y-1 md:gap-12 lg:gap-16 2xl:gap-28 w-[280px] xs:w-[360px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
+<section class="flex flex-col items-center justify-center mt-7" id="ubicacion">
+    <h1
+        class="text-lg xs:text-xl sm:text-3xl lg:text-4xl font-display font-black mt-12"
     >
-        <div class="bg-red-400">
-            <img class="h-full object-cover" src="./imagenes/ceremonia.avif" />
-        </div>
-
-        <div class="flex flex-col my-auto py-3">
-            <h1
-                class="font-display font-extrabold text-4xl md:text-[27px] lg:text-4xl 2xl:text-5xl"
-            >
-                CEREMONIA RELIGIOSA
-            </h1>
-            <p
-                class="font-display font-semibold text-2xl md:text-xl lg:text-3xl 2xl:text-4xl"
-            >
-                VIERNES, 9 DE AGOSTO
-            </p>
-            <p
-                class="font-display font-semibold text-2xl md:text-xl lg:text-3xl 2xl:text-4xl -mt-2"
-            >
-                6:00 P.M.
-            </p>
-
-            <p
-                class="font-bold font-display mt-4 lg:mt-2 2xl:mt-8 text-3xl md:text-2xl lg:text-3xl"
-            >
-                En Templo de San Diego
-            </p>
-            <p class="text-xl md:text-base lg:text-xl font-display">
-                Av. Tata Vasco 45-3, Centro histórico de Morelia, 58230 Morelia,
-                Mich.
-            </p>
-            <a href="https://maps.app.goo.gl/Urr1aLe8bsu1vXJw7" target="_blank">
-                <button
-                    type="button"
-                    class="bg-black text-white mt-4 text-xl md:text-base lg:text-xl p-3 font-bold rounded-md"
-                >
-                    Ver en el mapa
-                </button>
-            </a>
-        </div>
-
-        <div class="bg-red-400">
-            <img class="h-full object-cover" src="./imagenes/ceremonia.avif" />
-        </div>
-
-        <div class="flex flex-col my-auto py-3">
-            <h1
-                class="font-display font-extrabold text-4xl md:text-[27px] lg:text-4xl 2xl:text-5xl"
-            >
-                RECEPCIÓN
-            </h1>
-            <p
-                class="font-display font-semibold text-2xl md:text-xl lg:text-3xl 2xl:text-4xl"
-            >
-                VIERNES, 9 DE AGOSTO
-            </p>
-            <p
-                class="font-display font-semibold text-2xl md:text-xl lg:text-3xl 2xl:text-4xl -mt-2"
-            >
-                8:00 P.M.
-            </p>
-
-            <p
-                class="font-bold font-display mt-4 lg:mt-2 2xl:mt-8 text-3xl md:text-2xl lg:text-3xl"
-            >
-                Quinta Santa Fe
-            </p>
-            <p class="text-xl md:text-base lg:text-xl font-display">
-                Sobre Av. Atecuaro, Morelia, Mich.
-            </p>
-            <a href="https://maps.app.goo.gl/4j8uphSJqsvk2Qht5" target="_blank">
-                <button
-                    type="button"
-                    class="bg-black text-white mt-4 text-xl md:text-base lg:text-xl p-3 font-bold rounded-md"
-                >
-                    Ver en el mapa
-                </button>
-            </a>
-        </div>
-        <!-- <!-- <UbicacionElemento
+        NUESTROS EVENTOS SON EL
+    </h1>
+    <h1
+        class="text-2xl xs:text-[33px]/8 sm:text-5xl lg:text-6xl font-display font-black mb-10"
+    >
+        VIERNES, 9 DE AGOSTO
+    </h1>
+    <div
+        class="text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-x-0 gap-y-1 md:gap-12 lg:gap-16 2xl:gap-28 w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
+    >
+        <UbicacionElemento
             evento="Ceremonia Religiosa"
+            imagen="./imagenes/ceremonia.avif"
             hora="06:00 P.M."
             lugar="Templo de San Diego"
             direccion="Av. Tata Vasco 45-3, Centro histórico de Morelia, 58230 Morelia, Mich."
             url="https://maps.app.goo.gl/Urr1aLe8bsu1vXJw7"
-        /> -->
+        />
+
         <UbicacionElemento
             evento="Recepción"
+            imagen="./imagenes/fiesta.avif"
             hora="08:00 P.M."
             lugar="Quinta Santa fe"
             direccion="Sobre Av. Atecuaro, Morelia, Mich."
             url="https://maps.app.goo.gl/4j8uphSJqsvk2Qht5"
-        /> -->
+        />
     </div>
 </section>
