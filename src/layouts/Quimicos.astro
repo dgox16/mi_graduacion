@@ -36,13 +36,18 @@ const listaQuimicos = [
 ];
 ---
 
-<section class="flex justify-center">
+<section class="flex flex-col items-center justify-center" id="quimicos">
+    <h1
+        class="text-[28px]/6 xs:text-[35px]/8 sm:text-5xl lg:text-6xl font-display font-black mb-10"
+    >
+        VIERNES, 9 DE AGOSTO
+    </h1>
     <div
         class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 lg:gap-x-9 xl:gap-x-12 w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
     >
         {
             listaQuimicos.map((quimico) => (
-                <span class="text-[16px]/[18px] sm:text-[18px]/6 lg:text-2xl text-center">
+                <span class="xs:text-[21px]/[18px] sm:text-[18px]/6 lg:text-2xl text-center">
                     {quimico.nombreLargo}
                 </span>
             ))
