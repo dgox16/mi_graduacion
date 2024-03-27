@@ -34,6 +34,10 @@ const listaQuimicos = [
     { nombreLargo: "Vázquez Pérez Itzel del Milagro" },
     { nombreLargo: "Villegas Zuñiga Felipe Eduardo" },
 ];
+
+import { supabase } from "../lib/supabase";
+
+const { data: quimicos } = await supabase.from("quimico").select("*");
 ---
 
 <section class="flex flex-col items-center justify-center" id="quimicos">
@@ -57,9 +61,9 @@ const listaQuimicos = [
             class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 lg:gap-x-9 xl:gap-x-12"
         >
             {
-                listaQuimicos.map((quimico) => (
+                quimicos.map((quimico) => (
                     <span class="text-[15px]/[18px] xs:text-[15px]/[18px] sm:text-[17px]/6 lg:text-xl text-center">
-                        {quimico.nombreLargo}
+                        {quimico.nombre}
                     </span>
                 ))
             }

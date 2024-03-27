@@ -1,0 +1,7 @@
+---
+import { supabase } from "../lib/supabase";
+
+const { data: quimicos } = await supabase.from("quimico").select("*");
+---
+
+{quimicos.map((q) => <p>{q.nombre}</p>)}
