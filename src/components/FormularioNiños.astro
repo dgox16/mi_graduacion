@@ -47,21 +47,39 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
     const checkbox = document.getElementById("checkboxNiños");
     const formularioNiños = document.getElementById("formularioNiños");
 
-    checkbox.addEventListener("change", function () {
+    checkbox.addEventListener("change", () => {
         formularioNiños.style.display = checkbox.checked ? "block" : "none";
     });
+</script>
 
+<script>
     let contadorNiños = 1;
+    const mostrarOcultarNiño = (numero, estado) => {
+        document.getElementById(`niño${numero}`).style.display = estado
+            ? "block"
+            : "none";
+    };
+
+    const manejoCantidadNiños = (num, contador) => {
+        for (let indice = 1; indice <= num; indice++) {
+            const esAntesDeContador = indice <= contador;
+            mostrarOcultarNiño(indice, esAntesDeContador);
+        }
+    };
+    window.addEventListener("load", function () {
+        manejoCantidadNiños(10, contadorNiños);
+    });
+
     const agregarNiño = document.getElementById("agregarNiño");
     agregarNiño.addEventListener("click", function (e) {
         e.preventDefault();
         contadorNiños++;
-        console.info(contadorNiños);
+        manejoCantidadNiños(10, contadorNiños);
     });
     const quitarNiño = document.getElementById("quitarNiño");
     quitarNiño.addEventListener("click", function (e) {
         e.preventDefault();
         contadorNiños--;
-        console.info(contadorNiños);
+        manejoCantidadNiños(10, contadorNiños);
     });
 </script>
