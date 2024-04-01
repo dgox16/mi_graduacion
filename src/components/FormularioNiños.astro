@@ -18,7 +18,7 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
     <div class="flex flex-wrap -mx-3 mb-6">
         {
             numerosDel1Al10.map((numero) => (
-                <div class="w-full px-3" id={`niño${numero}`}>
+                <div class="w-full px-3" id={`campoNiño${numero}`}>
                     <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2">
                         Edad del Niño {numero}
                     </label>
@@ -54,8 +54,10 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
 
 <script>
     let contadorNiños = 1;
+    const maximoNiños = document.querySelectorAll("[id^=campoNiño]").length;
+
     const mostrarOcultarNiño = (numero, estado) => {
-        document.getElementById(`niño${numero}`).style.display = estado
+        document.getElementById(`campoNiño${numero}`).style.display = estado
             ? "block"
             : "none";
     };
@@ -66,20 +68,27 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
             mostrarOcultarNiño(indice, esAntesDeContador);
         }
     };
+
     window.addEventListener("load", function () {
-        manejoCantidadNiños(10, contadorNiños);
+        manejoCantidadNiños(maximoNiños, contadorNiños);
     });
 
     const agregarNiño = document.getElementById("agregarNiño");
     agregarNiño.addEventListener("click", function (e) {
         e.preventDefault();
-        contadorNiños++;
-        manejoCantidadNiños(10, contadorNiños);
+        if (contadorNiños < maximoNiños) {
+            contadorNiños++;
+            manejoCantidadNiños(maximoNiños, contadorNiños);
+        }
     });
+
     const quitarNiño = document.getElementById("quitarNiño");
+
     quitarNiño.addEventListener("click", function (e) {
         e.preventDefault();
-        contadorNiños--;
-        manejoCantidadNiños(10, contadorNiños);
+        if (contadorNiños > 1) {
+            contadorNiños--;
+            manejoCantidadNiños(maximoNiños, contadorNiños);
+        }
     });
 </script>
