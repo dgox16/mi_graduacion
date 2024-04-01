@@ -43,24 +43,25 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
     >
 </div>
 
-<!-- <script>
+<script>
     const checkbox = document.getElementById("checkboxNiños");
-    const divAMostrar = document.getElementById("formularioNiños");
+    const formularioNiños = document.getElementById("formularioNiños");
 
     checkbox.addEventListener("change", function () {
-        // if (checkbox.checked) {
-        //     divAMostrar.style.display = "block";
-        // } else {
-        //     divAMostrar.style.display = "none";
-        // }
+        formularioNiños.style.display = checkbox.checked ? "block" : "none";
     });
 
+    let contadorNiños = 1;
     const agregarNiño = document.getElementById("agregarNiño");
     agregarNiño.addEventListener("click", function (e) {
         e.preventDefault();
+        contadorNiños++;
+        console.info(contadorNiños);
     });
     const quitarNiño = document.getElementById("quitarNiño");
     quitarNiño.addEventListener("click", function (e) {
         e.preventDefault();
+        contadorNiños--;
+        console.info(contadorNiños);
     });
-</script> -->
+</script>

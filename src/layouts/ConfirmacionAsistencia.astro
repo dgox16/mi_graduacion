@@ -1,5 +1,4 @@
 ---
-import FormularioNios from "../components/FormularioNiños.astro";
 import FormularioNiños from "../components/FormularioNiños.astro";
 import { supabase } from "../lib/supabase";
 
@@ -63,7 +62,7 @@ const { data: quimicos } = await supabase.from("quimico").select("*");
                     </select>
                 </div>
             </div>
-            <FormularioNios />
+            <FormularioNiños />
         </form>
     </div>
 </section>
