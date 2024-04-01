@@ -5,9 +5,9 @@ import { supabase } from "../lib/supabase";
 const { data: quimicos } = await supabase.from("quimico").select("*");
 ---
 
-<section class="flex items-center justify-center p-5" id="confirmarAsistencia">
+<section class="flex items-center justify-center mt-9" id="confirmarAsistencia">
     <div
-        class="bg-black p-16 rounded-lg w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
+        class="bg-black p-4 md:p-16 rounded-lg w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
     >
         <form class="w-full text-black">
             <div class="flex flex-wrap -mx-3 mb-6">
