@@ -43,6 +43,12 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
         class="bg-gray-600 hover:bg-gray-400 text-white font-bold py-2 px-2 ml-2 rounded transition"
         >Quitar campo</button
     >
+    <input
+        type="hidden"
+        name="cantidadNiños"
+        id="contadorNiñosHidden"
+        value="1"
+    />
 </div>
 
 <script>
@@ -57,6 +63,7 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
 <script>
     let contadorNiños = 1;
     const maximoNiños = document.querySelectorAll("[id^=campoNiño]").length;
+    const contadorNiñosHidden = document.getElementById("contadorNiñosHidden");
 
     const mostrarOcultarNiño = (numero, estado) => {
         document.getElementById(`campoNiño${numero}`).style.display = estado
@@ -65,6 +72,7 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
     };
 
     const manejoCantidadNiños = (num, contador) => {
+        contadorNiñosHidden.value = contador;
         for (let indice = 1; indice <= num; indice++) {
             const esAntesDeContador = indice <= contador;
             mostrarOcultarNiño(indice, esAntesDeContador);

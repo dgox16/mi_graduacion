@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { supabase } from "../../lib/supabase";
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, redirect }) => {
 	const formData = await request.formData();
 	const nombre = formData.get("nombre");
 	const apellidos = formData.get("apellidos");
@@ -36,5 +36,5 @@ export const POST: APIRoute = async ({ request }) => {
 		);
 	}
 
-	return new Response(JSON.stringify(data));
+	return redirect("/");
 };
