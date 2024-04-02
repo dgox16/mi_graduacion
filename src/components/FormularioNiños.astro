@@ -9,6 +9,7 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
                 id="checkboxNiños"
                 class="mr-2 leading-tight"
                 type="checkbox"
+                name="llevaraNiños"
             />
             <span class="text-sm">¿Llevará niños con usted?</span>
         </label>
@@ -25,6 +26,7 @@ const numerosDel1Al10 = Array.from({ length: 10 }, (_, index) => index + 1);
                     <input
                         type="number"
                         min="0"
+                        name={`edadNiño${numero}`}
                         class="appearance-none block w-24 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     />
                 </div>
