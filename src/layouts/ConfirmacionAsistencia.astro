@@ -4,12 +4,29 @@ import FormularioNiños from "../components/FormularioNiños.astro";
 import { listaQuimicos } from "../constants/quimicos";
 ---
 
-<section class="flex items-center justify-center mt-9" id="confirmarAsistencia">
+<section
+    class="flex items-center justify-center mt-6 md:mt-16"
+    id="confirmarAsistencia"
+>
     <div
-        class="bg-black p-4 md:p-16 rounded-lg w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
+        class="bg-black p-5 sm:p-8 md:p-14 rounded-lg w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
     >
+        <div class="text-center md:text-left">
+            <h1
+                class="text-lg xs:text-xl sm:text-2xl lg:text-4xl text-white font-bold uppercase"
+            >
+                Confirme su asistencia
+            </h1>
+            <h2
+                class="text-white opacity-95 text-xs xs:text-sm sm:text-base lg:text-lg w-full md:w-[50ch] lg:w-[70ch]"
+            >
+                Nos encantaría contar con su presencia en este día especial.
+                Porfavor, confirme su asistencia llenando el siguiente
+                formulario.
+            </h2>
+        </div>
         <form
-            class="w-full text-black"
+            class="w-full mt-9"
             action="/api/asistenciaSupabase"
             method="post"
         >
@@ -22,7 +39,7 @@ import { listaQuimicos } from "../constants/quimicos";
                         Nombre
                     </label>
                     <input
-                        class="appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        class="appearance-none block w-full text-sm sm:text-base bg-gray-200 rounded py-2 sm:py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                         id="nombre"
                         name="nombre"
                         type="text"
@@ -37,7 +54,7 @@ import { listaQuimicos } from "../constants/quimicos";
                         Apellidos
                     </label>
                     <input
-                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        class="appearance-none block w-full bg-gray-200 text-sm sm:text-base text-gray-700 border border-gray-200 rounded py-2 sm:py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         id="apellidos"
                         name="apellidos"
                         type="text"
@@ -51,10 +68,10 @@ import { listaQuimicos } from "../constants/quimicos";
                         class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                         for="quimico"
                     >
-                        A cual de nuestros quimicos farmacobiologos acompañará:
+                        ¿A cual de nuestros quimicos farmacobiologos acompañará?
                     </label>
                     <select
-                        class="block appearance-none w-full text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        class="text-sm sm:text-base block appearance-none w-full text-gray-700 py-2 sm:py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         id="quimico"
                         name="quimico"
                     >
@@ -69,7 +86,13 @@ import { listaQuimicos } from "../constants/quimicos";
                 </div>
             </div>
             <FormularioNiños />
-            <button type="submit" class="bg-yellow-400 p-3">Enviar</button>
+            <div class="flex justify-end">
+                <button
+                    type="submit"
+                    class="bg-yellow-400 px-5 py-3 rounded-lg w-full sm:w-24"
+                    >Enviar</button
+                >
+            </div>
         </form>
     </div>
 </section>
