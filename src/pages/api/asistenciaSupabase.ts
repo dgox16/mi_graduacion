@@ -3,37 +3,42 @@ import { supabase } from "../../lib/supabase";
 
 export const POST: APIRoute = async ({ request, redirect }) => {
 	const formData = await request.formData();
-	const nombre = formData.get("nombre");
-	const apellidos = formData.get("apellidos");
-	const quimico = formData.get("quimico");
-	const llevaraNiños = formData.get("llevaraNiños");
-	const edadNiño1 = formData.get("edadNiño1");
-	const edadNiño2 = formData.get("edadNiño2");
-	const edadNiño3 = formData.get("edadNiño3");
-	const edadNiño4 = formData.get("edadNiño4");
-	const edadNiño5 = formData.get("edadNiño5");
+	const { nombre, apellidos, quimico, llevaraNiños } =
+		Object.fromEntries(formData);
 
-	console.info(nombre);
-	console.info(apellidos);
-	console.info(quimico);
-	console.info(llevaraNiños);
-	console.info(edadNiño1);
-	console.info(edadNiño2);
-	console.info(edadNiño3);
-	console.info(edadNiño4);
-	console.info(edadNiño5);
-	const { data, error } = await supabase
+	const { data: invitado, error: errorInvitado } = await supabase
 		.from("invitados")
-		.insert([{ nombre: nombre, apellidos: apellidos, quimico: quimico }])
+		.insert([{ nombre, apellidos, quimico, llevaraNiños }])
 		.select();
 
-	if (error) {
+	if (errorInvitado) {
 		return new Response(
 			JSON.stringify({
-				error: error.message,
+				error: errorInvitado.message,
 			}),
 			{ status: 500 },
 		);
+	}
+
+	if (llevaraNiños) {
+		const cantidadNiños = Number(formData.get("cantidadNiños"));
+
+		for (let i = 1; i <= cantidadNiños; i++) {
+			const edadNiño = Number(formData.get(`edadNiño${i}`));
+
+			const { error: errorNiño } = await supabase
+				.from("niños")
+				.insert([{ edad: edadNiño, invitado: invitado[0].id }]);
+
+			if (errorNiño) {
+				return new Response(
+					JSON.stringify({
+						error: errorNiño.message,
+					}),
+					{ status: 500 },
+				);
+			}
+		}
 	}
 
 	return redirect("/");

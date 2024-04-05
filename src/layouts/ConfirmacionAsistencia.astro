@@ -1,8 +1,7 @@
 ---
 import FormularioNiños from "../components/FormularioNiños.astro";
-import { supabase } from "../lib/supabase";
 
-const { data: quimicos } = await supabase.from("quimico").select("*");
+import { listaQuimicos } from "../constants/quimicos";
 ---
 
 <section class="flex items-center justify-center mt-9" id="confirmarAsistencia">
@@ -60,7 +59,7 @@ const { data: quimicos } = await supabase.from("quimico").select("*");
                         name="quimico"
                     >
                         {
-                            quimicos.map((quimico) => (
+                            listaQuimicos.map((quimico) => (
                                 <option value={quimico.id}>
                                     {quimico.nombre}
                                 </option>
