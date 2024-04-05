@@ -9,24 +9,23 @@ import { listaQuimicos } from "../constants/quimicos";
     id="confirmarAsistencia"
 >
     <div
-        class="bg-black p-5 sm:p-8 md:p-14 rounded-lg w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
+        class="bg-black p-5 sm:p-8 md:p-9 lg:p-14 rounded-lg w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
     >
-        <div class="text-center md:text-left">
+        <div class="text-center text-pretty">
             <h1
                 class="text-lg xs:text-xl sm:text-2xl lg:text-4xl text-white font-bold uppercase"
             >
                 Confirme su asistencia
             </h1>
             <h2
-                class="text-white opacity-95 text-xs xs:text-sm sm:text-base lg:text-lg w-full md:w-[50ch] lg:w-[70ch]"
+                class="text-white opacity-95 text-xs xs:text-sm sm:text-base lg:text-lg"
             >
-                Nos encantaría contar con su presencia en este día especial.
                 Porfavor, confirme su asistencia llenando el siguiente
                 formulario.
             </h2>
         </div>
         <form
-            class="w-full mt-9"
+            class="w-full mt-9 sm:mt-12"
             action="/api/asistenciaSupabase"
             method="post"
         >
@@ -89,7 +88,7 @@ import { listaQuimicos } from "../constants/quimicos";
             <div class="flex justify-end">
                 <button
                     type="submit"
-                    class="bg-yellow-400 px-5 py-3 rounded-lg w-full sm:w-24"
+                    class="bg-yellow-400 px-5 py-3 rounded-lg w-full md:w-24"
                     >Enviar</button
                 >
             </div>
