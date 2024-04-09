@@ -8,7 +8,9 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
 	const { data: invitado, error: errorInvitado } = await supabase
 		.from("invitados")
-		.insert([{ nombre, apellidos, quimico, llevaraNiños }])
+		.insert([
+			{ nombre, apellidos, quimico, llevaraNiños: llevaraNiños === "on" },
+		])
 		.select();
 
 	if (errorInvitado) {
