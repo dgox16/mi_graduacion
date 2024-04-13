@@ -2,7 +2,7 @@
 const { evento, hora, lugar, direccion, url, imagen } = Astro.props;
 ---
 
-<img class="h-full object-cover" src={imagen} />
+<img class="h-full object-cover rounded-lg" src={imagen} />
 
 <div class="flex flex-col my-auto py-3">
     <h1
@@ -27,7 +27,7 @@ const { evento, hora, lugar, direccion, url, imagen } = Astro.props;
     <a href={url} target="_blank">
         <button
             type="button"
-            class="bg-black text-white mt-4 mb-4 md:mb-0 text-base sm:text-xl md:text-base lg:text-xl p-3 font-bold rounded-md"
+            class="bg-black text-white my-3 sm:my-4 text-base sm:text-xl md:text-base lg:text-xl p-3 font-bold rounded-md"
         >
             Ver en el mapa
         </button>
