@@ -1,0 +1,42 @@
+---
+import ArrowBack from "../svg/ArrowBack.astro";
+export const prerender = true;
+import "@fontsource-variable/anek-latin";
+import "@fontsource/aileron/400.css";
+import "@fontsource/aileron/700.css";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta
+            name="description"
+            content="Página de agradecimiento por confirmar la asistencia."
+        />
+        <title>Agradecimiento</title>
+    </head>
+    <body>
+        <main
+            class="flex items-center justify-center mt-6 md:mt-16"
+            id="confirmarAsistencia"
+        >
+            <div
+                class="p-5 sm:p-8 md:p-9 lg:p-0 rounded-lg w-[280px] xs:w-[350px] sm:w-[600px] lg:w-[800px] 2xl:w-[1100px]"
+            >
+                <a
+                    href="/"
+                    class="flex flex-row items-center text-2xl font-bold opacity-60"
+                >
+                    <ArrowBack />
+                    REGRESAR AL INICIO
+                </a>
+                <h1 class="font-display text-6xl font-black mt-6">
+                    ¡GRACIAS POR CONFIRMAR TU ASISTENCIA A NUESTRO EVENTO!
+                </h1>
+            </div>
+        </main>
+    </body>
+</html>
