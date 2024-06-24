@@ -19,6 +19,7 @@
 		"tailwindcss": "^3.4.4"
 	},
 	"devDependencies": {
+		"prettier-plugin-astro": "^0.14.0",
 		"typescript-language-server": "4.3.3"
 	}
 }
