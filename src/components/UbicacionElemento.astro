@@ -2,36 +2,38 @@
 const { evento, hora, lugar, direccion, url, imagen } = Astro.props;
 ---
 
-<div>
-    <img class="object-cover rounded-lg" src={imagen} />
+<div class="flex justify-center flex-col items-center">
+    <img class="object-cover rounded-lg h-80 w-full" src={imagen} />
 
     <div class="flex flex-col my-auto py-3">
         <h1
-            class="font-display font-extrabold text-3xl sm:text-4xl md:text-[27px] lg:text-4xl 2xl:text-5xl"
+            class="font-display font-extrabold text-center text-3xl sm:text-4xl md:text-[27px] lg:text-4xl 2xl:text-5xl"
         >
             {evento}
         </h1>
         <p
-            class="font-display font-semibold text-xl sm:text-2xl md:text-xl lg:text-3xl 2xl:text-4xl"
+            class="font-display font-semibold text-center text-xl sm:text-2xl md:text-xl lg:text-3xl 2xl:text-4xl"
         >
             {hora}
         </p>
 
         <p
-            class="font-bold font-display mt-4 lg:mt-2 2xl:mt-8 text-2xl sm:text-3xl md:text-2xl lg:text-3xl"
+            class="font-bold font-display mt-4 text-center lg:mt-2 2xl:mt-8 text-2xl sm:text-3xl md:text-2xl lg:text-3xl"
         >
             {lugar}
         </p>
-        <p class="text-lg sm:text-xl md:text-lg lg:text-xl font-display">
+        <p
+            class="text-lg sm:text-xl md:text-lg text-center lg:text-xl font-display"
+        >
             {direccion}
         </p>
-        <a href={url} target="_blank">
-            <button
-                type="button"
-                class="bg-black text-white my-3 sm:my-4 text-base sm:text-xl md:text-base lg:text-xl p-3 font-bold rounded-md"
-            >
-                Ver en el mapa
-            </button>
+        <a
+            type="button"
+            href={url}
+            target="_blank"
+            class="bg-black text-white mx-auto my-3 sm:my-4 text-base sm:text-xl md:text-base lg:text-xl p-3 font-bold rounded-md w-fit"
+        >
+            Ver en el mapa
         </a>
     </div>
 </div>
