@@ -5,7 +5,7 @@
 	"packageManager": "pnpm@9.4.0",
 	"scripts": {
 		"dev": "astro dev",
-		"start": "node dist/server/entry.mjs",
+		"start": "HOST=0.0.0.0 node dist/server/entry.mjs --host $HOST",
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro"
