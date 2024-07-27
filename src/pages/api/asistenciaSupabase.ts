@@ -6,30 +6,6 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 	const { nombre, apellidos, quimico, llevaraNiños } =
 		Object.fromEntries(formData);
 
-	const payload = {
-		nombre,
-		apellidos,
-		quimico,
-		llevaraNiños: llevaraNiños === "on",
-		niños: [],
-	};
-
-	if (llevaraNiños) {
-		const cantidadNiños = Number(formData.get("cantidadNiños"));
-		for (let i = 1; i <= cantidadNiños; i++) {
-			const edadNiño = Number(formData.get(`edadNiño${i}`));
-			payload.niños.push({ edad: edadNiño });
-		}
-	}
-
-	await fetch("https://apigraduacion-production.up.railway.app", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify(payload),
-	});
-
 	const { data: invitado, error: errorInvitado } = await supabase
 		.from("invitados")
 		.insert([
