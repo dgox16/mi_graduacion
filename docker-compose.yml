@@ -1,0 +1,7 @@
+services:
+  mi-graduacion:
+    image: ghcr.io/dgox16/mi_graduacion_astro:latest
+    container_name: "mi-graduacion-container"
+    restart: unless-stopped
+    ports:
+      - "8009:80"
