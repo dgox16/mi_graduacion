@@ -1,6 +1,6 @@
 services:
   mi-graduacion:
-    image: ghcr.io/dgox16/mi_graduacion_astro:latest
+    image: ghcr.io/dgox16/mi_graduacion:latest
     container_name: "mi-graduacion-container"
     restart: unless-stopped
     ports:
